@@ -85,6 +85,7 @@ public class LatestFragment extends Fragment {
         super.onStart();
         progressBar.setVisibility(View.VISIBLE);
 
+        /*
         mDatabaseRefwi.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -105,7 +106,7 @@ public class LatestFragment extends Fragment {
             public void onCancelled(@NonNull DatabaseError databaseError) {
                 Toast.makeText(getActivity(), databaseError.getMessage(), Toast.LENGTH_LONG).show();
             }
-        });
+        });  */
 
         FirebaseRecyclerAdapter<allreports, LatestFragment.allreportsHolder> firebaseRecyclerAdapter = new FirebaseRecyclerAdapter<allreports, LatestFragment.allreportsHolder>
                 (allreports.class, R.layout.list_reports, LatestFragment.allreportsHolder.class, databaseReports) {
